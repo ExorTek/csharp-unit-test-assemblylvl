@@ -1,12 +1,15 @@
 # Unit Test
 ## Assembly Level
 ```csharp
-         [AssemblyInitialize]
+    [TestClass]
+    public class UnitTest
+    {
+        [AssemblyInitialize]
         public static void AssemblyInitialize(TestContext context)
         {
             Debug.WriteLine("Running AssemblyInitialize");
         }
-         [AssemblyCleanup]
+        [AssemblyCleanup]
         public static void AssemblyCleanup()
         {
             Debug.WriteLine("Running AssemblyCleanup");
@@ -16,6 +19,7 @@
         {
             Debug.WriteLine("Running TestMethod");
         }
+      }
 ```
         
 <img src="assembly-lvl.png" align="center" style="width: 100%" />
